@@ -77,14 +77,14 @@ canvas {
 .flex-container > div {
 width: 50%;
 }
-	
+		
 .home-row-box {
     height: inherit;
 }
 	
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-	.home-row, .flex-container > div {height: 20vh; width: 100%;}
+	.home-row, .flex-container > div {height: 50vh; width: 100%;}
 	.header-carousel {height: 65vh;}	
 	.flex-container{flex-direction: column;}
 	.flipmode1 {order: 1;}
@@ -95,7 +95,6 @@ width: 50%;
 @media only screen and (min-width: 600px) {
 	.home-row, .flex-container > div {height: 45vh;}
 	.header-carousel {height: 65vh;}
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -148,12 +147,12 @@ width: 50%;
   <div class="w3-green" >
     <h2>w3-half 1</h2>
   </div>
-  <div class="">
+  <div style="three-d-container" >
 	<canvas class="renderCanvas" id="renderCanvas0"></canvas>
   </div>
 </div>
 <div class="flex-container">
-  <div class="flipmode2" style="">
+  <div class="flipmode2" style="3dcontainer">
   	<canvas class="renderCanvas" id="renderCanvas1"></canvas>
   </div>
   <div class="flipmode1 w3-amber" style="">
@@ -164,12 +163,12 @@ width: 50%;
   <div class="w3-amber" >
     <h2>w3-half 1</h2>
   </div>
-  <div class="">
+  <div style="3dcontainer">
 	<canvas class="renderCanvas" id="renderCanvas2"></canvas>
   </div>
 </div>
 <div class="flex-container">
-  <div class="flipmode2" style="">
+  <div class="flipmode2" style="3dcontainer">
   	<canvas class="renderCanvas" id="renderCanvas3"></canvas>
   </div>
   <div class="flipmode1 w3-amber" style="">
