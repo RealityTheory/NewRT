@@ -44,9 +44,9 @@ var createScene = function () {
 
     box.material = mat;
 	
-	//BABYLON.SceneLoader.Append("./assets/", "low_poly_mccree.glb", scene, function (scene) {
+	BABYLON.SceneLoader.Append("assets/", "low_poly_mccree.glb", scene, function (scene) {
     // do something with the scene
-	//});
+	});
 	
 	// The first parameter can be set to null to load all meshes and skeletons
 	/*BABYLON.SceneLoader.ImportMesh("", "assets/", "low_poly_mccree.glb", scene, function (newMeshes) {
