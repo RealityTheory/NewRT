@@ -43,7 +43,17 @@ var createScene = function () {
     mat.roughness = 0.5;
 
     box.material = mat;
-
+	
+	//BABYLON.SceneLoader.Append("./assets/", "low_poly_mccree.glb", scene, function (scene) {
+    // do something with the scene
+	//});
+	
+	// The first parameter can be set to null to load all meshes and skeletons
+	/*BABYLON.SceneLoader.ImportMesh("", "assets/", "low_poly_mccree.glb", scene, function (newMeshes) {
+	// do something with the meshes and skeletons
+	// particleSystems are always null for glTF assets
+	});
+	*/
     scene.createDefaultEnvironment();
     
     engine.registerView(document.getElementById("renderCanvas0"), camera);
@@ -59,6 +69,7 @@ var createScene = function () {
         camera3.beta = Math.cos(alpha);
 
         alpha += 0.01;
+		// light.position = camera.position;
     })
 
     return scene;

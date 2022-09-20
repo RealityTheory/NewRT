@@ -1,0 +1,11 @@
+Model Information:
+* title:	Defender-class Light Corvette
+* source:	https://sketchfab.com/3d-models/defender-class-light-corvette-9e4a1e2636824f57a558d2e20100d29a
+* author:	lightwarrior (https://sketchfab.com/user3754564)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Defender-class Light Corvette" (https://sketchfab.com/3d-models/defender-class-light-corvette-9e4a1e2636824f57a558d2e20100d29a) by lightwarrior (https://sketchfab.com/user3754564) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
