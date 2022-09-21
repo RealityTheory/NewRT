@@ -33,27 +33,28 @@ var createScene = function () {
     light.intensity = 0.7;
 
     // Our built-in 'sphere' shape.
-    var box = BABYLON.MeshBuilder.CreateBox("Box", {size: 2}, scene);
+    //var box = BABYLON.MeshBuilder.CreateBox("Box", {size: 2}, scene);
 
-    box.position.y = 0.5;
+    //box.position.y = 0.5;
 
-    var mat = new BABYLON.PBRMetallicRoughnessMaterial("mat", scene);
+    //var mat = new BABYLON.PBRMetallicRoughnessMaterial("mat", scene);
 
-    mat.metallic = 1;
-    mat.roughness = 0.5;
+    //mat.metallic = 1;
+    //mat.roughness = 0.5;
 
-    box.material = mat;
+    //box.material = mat;
 	
-	BABYLON.SceneLoader.Append("./assets/", "low_poly_mccree.glb", scene, function (scene) {
-    // do something with the scene
+	BABYLON.SceneLoader.Append("./assets/godette_rigged/", "scene.gltf", scene, function (meshes) {
+    // do something with the scene ??? But what would you do ???	
+
 	});
 	
-	// The first parameter can be set to null to load all meshes and skeletons
-	/*BABYLON.SceneLoader.ImportMesh("", "assets/", "low_poly_mccree.glb", scene, function (newMeshes) {
-	// do something with the meshes and skeletons
-	// particleSystems are always null for glTF assets
+		
+	BABYLON.SceneLoader.Append("./assets/", "low_poly_mccree.glb", scene, function (meshes) {
+    // do something with the scene ??? But what would you do ???	
 	});
-	*/
+	
+
     scene.createDefaultEnvironment();
     
     engine.registerView(document.getElementById("renderCanvas0"), camera);
@@ -64,11 +65,11 @@ var createScene = function () {
     // Some animations  Need to fix this !!!! Remove 
     var alpha = 0;
     scene.registerBeforeRender(() => {
-        camera1.radius = 10 + Math.cos(alpha) * 5;
+/*        camera1.radius = 10 + Math.cos(alpha) * 5;
         camera2.alpha += 0.01;
         camera3.beta = Math.cos(alpha);
 
-        alpha += 0.01;
+        alpha += 0.01;*/
 		// light.position = camera.position;
     })
 
