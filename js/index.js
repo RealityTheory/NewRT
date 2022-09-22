@@ -44,15 +44,15 @@ var createScene = function () {
 
     //box.material = mat;
 	
-	BABYLON.SceneLoader.Append("./assets/godette_rigged/", "scene.gltf", scene, function (meshes) {
+	BABYLON.SceneLoader.Append("./assets/tyrannosaurus_rex/", "scene.gltf", scene, function (meshes) {
     // do something with the scene ??? But what would you do ???	
 
 	});
 	
 		
-	BABYLON.SceneLoader.Append("./assets/", "low_poly_mccree.glb", scene, function (meshes) {
+	/*BABYLON.SceneLoader.Append("./assets/", "low_poly_mccree.glb", scene, function (meshes) {
     // do something with the scene ??? But what would you do ???	
-	});
+	});*/
 	
 
     scene.createDefaultEnvironment();
