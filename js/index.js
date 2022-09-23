@@ -32,27 +32,50 @@ var createScene = function () {
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
 
-    // Our built-in 'sphere' shape.
-    //var box = BABYLON.MeshBuilder.CreateBox("Box", {size: 2}, scene);
-
-    //box.position.y = 0.5;
-
-    //var mat = new BABYLON.PBRMetallicRoughnessMaterial("mat", scene);
-
-    //mat.metallic = 1;
-    //mat.roughness = 0.5;
-
-    //box.material = mat;
-	
-	BABYLON.SceneLoader.Append("./assets/tyrannosaurus_rex/", "scene.gltf", scene, function (meshes) {
-    // do something with the scene ??? But what would you do ???	
-
+	// Set layer masks
+	camera.layerMask = 1;
+	camera1.layerMask = 2;
+	camera2.layerMask = 4;
+	camera3.layerMask = 8;
+    
+	BABYLON.SceneLoader.ImportMesh("", "./assets/tyrannosaurus_rex/", "scene.gltf", scene, function (newMeshes) {
+		// do something with the scene ??? But what would you do ???
+		for (var i = 0; i < newMeshes.length; i++){
+			console.log(newMeshes[i].name);
+			//newMeshes[0].scaling = new BABYLON.Vector3 (0.5,0.5,0.5);
+			newMeshes[i].layerMask = 1;
+		}
+		var firstMesh = newMeshes[0];
+		firstMesh.scaling = new BABYLON.Vector3 (0.5,0.5,0.5);
+	});
+		
+		
+	BABYLON.SceneLoader.ImportMesh("", "./assets/", "low_poly_mccree.glb", scene, function (newMeshes) {
+		// do something with the scene ??? But what would you do ???	
+		for (var i = 0; i < newMeshes.length; i++){
+			console.log(newMeshes[i].name);
+			//newMeshes[0].scaling = new BABYLON.Vector3 (0.5,0.5,0.5);
+			newMeshes[i].layerMask = 2;
+		}
 	});
 	
-		
-	/*BABYLON.SceneLoader.Append("./assets/", "low_poly_mccree.glb", scene, function (meshes) {
-    // do something with the scene ??? But what would you do ???	
-	});*/
+	BABYLON.SceneLoader.ImportMesh("", "./assets/cute_spino/", "scene.gltf", scene, function (newMeshes) {
+		// do something with the scene ??? But what would you do ???	
+		for (var i = 0; i < newMeshes.length; i++){
+			console.log(newMeshes[i].name);
+			newMeshes[i].scaling = new BABYLON.Vector3 (2.0,2.0,2.0);
+			newMeshes[i].layerMask = 4;
+		}
+	});
+	
+	BABYLON.SceneLoader.ImportMesh("", "./assets/defender-class_light_corvette/", "scene.gltf", scene, function (newMeshes) {
+		// do something with the scene ??? But what would you do ???	
+		for (var i = 0; i < newMeshes.length; i++){
+			console.log(newMeshes[i].name);
+			newMeshes[i].scaling = new BABYLON.Vector3 (0.15,0.15,0.15);
+			newMeshes[i].layerMask = 8;
+		}
+	});
 	
 
     scene.createDefaultEnvironment();
