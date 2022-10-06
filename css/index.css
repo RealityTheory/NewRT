@@ -15,6 +15,28 @@ body *, body *:before, body *:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
+
+
+.contentBox{
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+.contentBox > h1 {
+	color: white;
+	font-size: 3.5rem;
+}
+
+.contentBox > h2 {
+	color: black;
+	font-size: 2rem;
+}
+
+.contentBox > p {
+	color: white;
+	font-size: 1.2rem;
+}
+
 .section {
     display: block;
     position: relative;
