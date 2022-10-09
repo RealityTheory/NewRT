@@ -24,11 +24,13 @@ body *, body *:before, body *:after {
 }
 
 .altColour0{
-	background-color: rgb(108,155,247);
+	background-color: rgb(108,155,247); /* For browsers that do not support gradients */
+	background-image: linear-gradient(100deg, rgba(108,155,247,1), rgba(100,100,255,1));
 }
 
 .altColour1{
-	background-color: rgb(255,197,0);
+	background-color: rgb(255,197,0); /* For browsers that do not support gradients */
+	background-image: linear-gradient(260deg, rgba(230,197,0,1), rgba(255,197,0,1));
 }
 
 .contentBox > h1 {
