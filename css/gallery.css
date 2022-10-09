@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}*/
+
+.w3-third img{opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
