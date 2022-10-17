@@ -15,9 +15,15 @@ var createScene = function () {
 	
 	// This stops the camera from zooming at all
 	camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
+	
+	// Sets zoom distance limits if zoom is enabled
+	//camera.lowerRadiusLimit = 4;
+    //camera.upperRadiusLimit = 20;
+	
+	// Sets up/down movement limits 
+	camera.lowerBetaLimit = 0.5;
+    camera.upperBetaLimit = 2;
 
-    camera.lowerRadiusLimit = 4;
-    camera.upperRadiusLimit = 20;
 
     camera1 = new BABYLON.ArcRotateCamera("Camera1", 0, 0.8, 10, new BABYLON.Vector3.Zero(), scene);
 
