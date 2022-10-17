@@ -140,6 +140,8 @@ width: 50%;
 	.flex-container{flex-direction: column;}
 	.flipmode1 {order: 1;}
 	.flipmode2 {order: 2;}
+	.contentBox > h1 {font-size: 8vw;}	
+	.contentBox > h5 {font-size: 5vw;}	
 }
 	
 /* Small devices (portrait tablets and large phones, 600px and up) */

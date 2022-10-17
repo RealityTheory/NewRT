@@ -12,6 +12,9 @@ var createScene = function () {
     // This creates and positions a free camera (non-mesh)
     camera = new BABYLON.ArcRotateCamera("Camera0", 0, 0.8, 5, new BABYLON.Vector3.Zero(), scene);
     camera.setTarget(BABYLON.Vector3.Zero());
+	
+	// This stops the camera from zooming at all
+	camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
 
     camera.lowerRadiusLimit = 4;
     camera.upperRadiusLimit = 20;
