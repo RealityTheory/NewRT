@@ -17,8 +17,8 @@ var createScene = function () {
 	camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
 	// and for mobile
 	//camera.inputs.attached.pointers.pinchZoom = false;
-	camera.lowerRadiusLimit = camera.radius;
-    camera.upperRadiusLimit = camera.radius;
+	//camera.lowerRadiusLimit = camera.radius;
+    //camera.upperRadiusLimit = camera.radius;
 	
 	// Sets zoom distance limits if zoom is enabled
 	//camera.lowerRadiusLimit = 4;
