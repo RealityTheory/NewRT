@@ -16,7 +16,9 @@ var createScene = function () {
 	// This stops the camera from zooming at all on desktop
 	camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
 	// and for mobile
-	camera.inputs.attached.pointers.pinchZoom = false;
+	//camera.inputs.attached.pointers.pinchZoom = false;
+	camera.lowerRadiusLimit = camera.radius;
+    camera.upperRadiusLimit = camera.radius;
 	
 	// Sets zoom distance limits if zoom is enabled
 	//camera.lowerRadiusLimit = 4;
