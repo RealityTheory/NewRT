@@ -13,8 +13,10 @@ var createScene = function () {
     camera = new BABYLON.ArcRotateCamera("Camera0", 0, 0.8, 5, new BABYLON.Vector3.Zero(), scene);
     camera.setTarget(BABYLON.Vector3.Zero());
 	
-	// This stops the camera from zooming at all
+	// This stops the camera from zooming at all on desktop
 	camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
+	// and for mobile
+	camera.inputs.attached.pointers.pinchZoom = false;
 	
 	// Sets zoom distance limits if zoom is enabled
 	//camera.lowerRadiusLimit = 4;
