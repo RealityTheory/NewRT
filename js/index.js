@@ -17,7 +17,8 @@ var createScene = function () {
 	camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
 	//camera.inputs.removeByType("multiTouchPanAndZoom");
 	// and for mobile
-	camera.inputs.attached.pointers.multiTouchPanAndZoom = false;	
+	camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
+	camera.inputs.attached.pointers.multiTouchPanning = false;
 	//camera.lowerRadiusLimit = camera.radius;
     //camera.upperRadiusLimit = camera.radius;
 	
@@ -26,7 +27,7 @@ var createScene = function () {
     //camera.upperRadiusLimit = 20;
 	
 	// Sets up/down movement limits 
-	camera.lowerBetaLimit = 0.5;
+	camera.lowerBetaLimit = 1;
     camera.upperBetaLimit = 2;
 
 
