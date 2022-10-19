@@ -19,6 +19,8 @@ var createScene = function () {
 	// and for mobile
 	camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
 	camera.inputs.attached.pointers.multiTouchPanning = false;
+	camera.inputs.attached.pointers.pinchZoom = false;
+
 	//camera.lowerRadiusLimit = camera.radius;
     //camera.upperRadiusLimit = camera.radius;
 	
@@ -27,7 +29,7 @@ var createScene = function () {
     //camera.upperRadiusLimit = 20;
 	
 	// Sets up/down movement limits 
-	camera.lowerBetaLimit = 1;
+	camera.lowerBetaLimit = 0;
     camera.upperBetaLimit = 2;
 
 
