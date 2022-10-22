@@ -14,11 +14,11 @@ var createScene = function () {
     camera.setTarget(BABYLON.Vector3.Zero());
 	
 	// This stops the camera from zooming at all on desktop
-	camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
+	//camera.inputs.removeByType("ArcRotateCameraMouseWheelInput");
 	// and for mobile
-	camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
-	camera.inputs.attached.pointers.multiTouchPanning = false;
-	camera.inputs.attached.pointers.pinchZoom = false;
+	//camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
+	//camera.inputs.attached.pointers.multiTouchPanning = false;
+	//camera.inputs.attached.pointers.pinchZoom = false;
 
 	//camera.lowerRadiusLimit = camera.radius;
     //camera.upperRadiusLimit = camera.radius;
@@ -54,7 +54,7 @@ var createScene = function () {
 	camera2.layerMask = 4;
 	camera3.layerMask = 8;
     
-	BABYLON.SceneLoader.ImportMesh("", "./assets/tyrannosaurus_rex/", "scene.gltf", scene, function (newMeshes) {
+	BABYLON.SceneLoader.ImportMesh("", "./assets/shot_02/", "shot_02.gltf", scene, function (newMeshes) {
 		// do something with the scene ??? But what would you do ???
 		for (var i = 0; i < newMeshes.length; i++){
 			console.log(newMeshes[i].name);
@@ -75,7 +75,7 @@ var createScene = function () {
 		}
 	});
 	
-	BABYLON.SceneLoader.ImportMesh("", "./assets/cute_spino/", "scene.gltf", scene, function (newMeshes) {
+	BABYLON.SceneLoader.ImportMesh("", "./assets/tyrannosaurus_rex/", "scene.gltf", scene, function (newMeshes) {
 		// do something with the scene ??? But what would you do ???	
 		for (var i = 0; i < newMeshes.length; i++){
 			console.log(newMeshes[i].name);
@@ -94,7 +94,7 @@ var createScene = function () {
 	});
 	
 
-    scene.createDefaultEnvironment();
+    //scene.createDefaultEnvironment();
     
     engine.registerView(document.getElementById("renderCanvas0"), camera);
     engine.registerView(document.getElementById("renderCanvas1"), camera1);
