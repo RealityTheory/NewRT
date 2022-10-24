@@ -55,6 +55,8 @@ body *, body *:before, body *:after {
 	color: black;
 }
 
+.contentImage > img {width: 100%; height: 100%; object-fit: cover;}
+
 .altColour0{
 	background-color: rgb(108,155,247); /* For browsers that do not support gradients */
 	background-image: linear-gradient(100deg, rgba(108,155,247,1), rgba(100,100,255,1));
