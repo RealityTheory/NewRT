@@ -78,31 +78,20 @@
 }
 
 .fancy-gradient--style1{
-  --gradient_bg_color: #006dca;
-
-  --gradient_spot1_color: #001a39;
-  --gradient_spot1_w: 75vw;
-  --gradient_spot1_h: 75vh;
-  --gradient_spot1_x: 0;
-  --gradient_spot1_y: 0;
-
-  --gradient_spot2_color: #9b70ff;
-  --gradient_spot2_w: 75vw;
-  --gradient_spot2_h: 75vh;
-  --gradient_spot2_x: 100%;
-  --gradient_spot2_y: 0;
-
-  --gradient_spot3_color: #42ffc6;
-  --gradient_spot3_w: 75vw;
-  --gradient_spot3_h: 75vh;
-  --gradient_spot3_x: 100%;
-  --gradient_spot3_y: 100%;
-
-  --gradient_spot4_color: #ff3b8d;
-  --gradient_spot4_w: 75vw;
-  --gradient_spot4_h: 75vh;
-  --gradient_spot4_x: 0;
-  --gradient_spot4_y: 100%;
+	--gradient_bg_color:#040d21; 
+	--gradient_spot1_color:#325096; 
+	--gradient_spot2_color:#35569c; 
+	--gradient_spot3_color:#325096; 
+	--gradient_spot4_color:#00226b; 
+	--gradient_spot4_y:100%; 
+	--gradient_spot4_h:76%; 
+	--gradient_spot1_h:61%; 
+	--gradient_spot3_h:59%; 
+	--gradient_spot3_w:33%; 
+	--gradient_spot2_x:100%; 
+	--gradient_spot2_h:52%; 
+	--gradient_spot2_w:51%; 
+	--gradient_spot1_w:63%;
 }
 
 
