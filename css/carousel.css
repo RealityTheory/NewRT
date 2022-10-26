@@ -32,6 +32,15 @@ body {
   height: 32rem;
 }
 
+.carousel-item > img {
+	filter: brightness(75%);
+}
+
+.carousel-caption > h1 {
+	font-size: 3.5rem;
+	line-height: 90%;
+}
+
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
