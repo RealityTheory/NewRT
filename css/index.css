@@ -40,16 +40,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'geomanistbold', Arial, sans-serif;
-    color: white;
 }
 
 h2 {
 	color: rgb(129,147,178);
 }
 
-p {
-	color: white;
-}
 
 .headingGrad {
 	background: linear-gradient(90deg, rgba(162,250,207,1), rgba(100,172,255,1));
@@ -65,24 +61,13 @@ body *, body *:before, body *:after {
     box-sizing: inherit;
 }
 
-
 .contentBox{
 	padding-left: 5vw;
 	padding-right: 5vw;
-	color: black;
+	color: white;
 }
 
 .contentImage > img {width: 100%; height: 100%; object-fit: cover;}
-
-.altColour0{
-	background-color: rgb(4,13,33); /* For browsers that do not support gradients */
-	/*background-image: linear-gradient(100deg, rgba(108,155,247,1), rgba(100,100,255,1));*/
-}
-
-.altColour1{
-	background-color: rgb(255,197,0); /* For browsers that do not support gradients */
-	background-image: linear-gradient(260deg, rgba(230,197,0,1), rgba(255,197,0,1));
-}
 
 .contentBox > h1 {
 	font-size: 3.5rem;
@@ -131,8 +116,8 @@ canvas {
     transform: translate(-50%, -50%);
 }
 	
-	.top-nav {
-    z-index: 100;
+.top-nav {
+	z-index: 100;
 }
 
 .header-carousel{
@@ -152,6 +137,24 @@ width: 50%;
     height: inherit;
 }
 
+.contactBox{
+	padding-left: 5vw;
+	padding-right: 5vw;
+	color:black;
+}
+
+.contactBox > h1 {
+	font-size: 3.5rem;
+	line-height: 90%;
+}
+
+.contactBox > h2 {
+	font-size: 2rem;
+}
+
+.contactBox > p {
+	font-size: 1.2rem;
+}
 
 .footerLinks {color: white;}
 .footerLinks > a {padding-left: 5px; padding-right: 5px;}
