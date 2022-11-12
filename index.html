@@ -244,6 +244,8 @@ function onClick(element) {
 	camera.inputs.attached.pointers.multiTouchPanAndZoom = false;
 	camera.inputs.attached.pointers.multiTouchPanning = false;
 	camera.inputs.attached.pointers.pinchZoom = false;
+  // Gentle rotate on inactivity
+  camera.useAutoRotationBehavior = true;
 
 	
 	// Sets zoom distance limits if zoom is enabled
