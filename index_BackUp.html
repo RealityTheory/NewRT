@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New RT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	
+	
+<!-- Styles -->	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/carousel.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/backgroundgrads.css">
+
+
+<!-- Babylon.js stuff -->	
+<script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+<script src="js/index.js"></script>
+
+</head>	
+
+	
+<body class="w3-light-grey">
+	
+<!-- Header -->
+<div class="w3-top top-nav w3-white"> <a href="index.html"> <img class="w3-display-topleft w3-bar-item w3-padding" src="images/HeaderNameAndLogoBlack.png" style="height: 100%; width: auto;" alt="Reality Theory logo"> </a>
+  <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+    <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a> <a href="about-us.html" class="w3-bar-item w3-button">About us</a> <a href="what-we-do.html" class="w3-bar-item w3-button">What we do</a> <a href="contact-us.html" class="w3-bar-item w3-button">Contact us</a></div>
+  <div>
+    <button class="w3-button w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+  </div>
+</div>
+	
+<!-- Spacer
+<div class="w3-hide-small" style="margin-top:83px"></div> -->
+
+<!-- Carousel -->  	
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" 
+	class=""></button>
+  <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+</div>
+<div class="carousel-inner">
+  <div class="carousel-item active">
+	<img src="images/OculusGlobe_Portfolio.png" alt="A boy surrounded by beautiful nature">
+
+	<div class="container">
+	  <div class="carousel-caption text-start">
+		<h1>Hello...</h1>
+		<h1>We're Reality Theory</h1>
+		<p>We're passionate innovators, creating digital experiences that engage, inspire and entertain.</p>
+		<p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+	  </div>
+	</div>
+  </div>
+  <div class="carousel-item">
+	<img src="images/OculusGlobe_Portfolio.png" alt="A boy surrounded by beautiful nature">
+
+	<div class="container">
+	  <div class="carousel-caption text-start">
+		<h1>We work from strategy to delivery</h1>
+		<p>Harnessing strategy, creativity and cutting edge technology, making an impact with innovations in Training, Marketing, Education and Entertainment.</p>
+		<p><a class="btn btn-lg btn-primary" href="#">Contact us</a></p>
+	  </div>
+	</div>
+  </div>
+  <div class="carousel-item">
+	<img src="images/OculusGlobe_Portfolio.png" alt="A boy surrounded by beautiful nature">
+
+	<div class="container">
+	  <div class="carousel-caption text-start">
+		<h1>Let's make something amazing</h1>
+		<p>Real world solutions, powered by Virtual Reality, Augmented Reality, Web-3D and the Metaverse.</p>
+		<p><a class="btn btn-lg btn-primary" href="#">Contact us</a></p>
+	  </div>
+	</div>
+  </div>
+</div>
+<!--
+<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+-->
+</div>
+	
+<!-- Page content -->
+<div class="flex-container">
+	<div class="w3-cell-row w3-green">
+	  <div class="contentBox fancy-gradient fancy-gradient--style1 w3-container w3-cell w3-cell-middle">
+		<h1 class="headingGrad">Strategy, creativity and technology combined</h1>
+		<h2>To build real-world solutions</h2>
+		  <p class="w3-hide-medium">We’re a team of strategists, creatives and storytellers, technologists and visual designers who collaborate, with our clients, to create real-world solutions, powered by Virtual Reality, Augmented Reality, Web-3D and the Metaverse. Crafting immersive experiences for real and virtual environments.</p>
+	  </div>  
+	</div>
+  <div style="three-d-container" >
+	<canvas class="renderCanvas" id="renderCanvas0"></canvas>
+  </div>
+</div>
+	
+<div class="flex-container">
+  <div class="flipmode2" style="3dcontainer">
+  	<canvas class="renderCanvas" id="renderCanvas1"></canvas>
+  </div>
+	  	<div class="flipmode1 w3-cell-row w3-green">
+	  <div class="contentBox fancy-gradient fancy-gradient--style1 w3-container w3-cell w3-cell-middle">
+		<h1 class="headingGrad">Training that engages</h1>
+		<h2>Next level learning and development</h2>
+		  <p class="w3-hide-medium">Place employees in fully immersive, interactive learning environments.<br/>Lifelike training can be provided for any scenario, especially useful in environments that are difficult or costly to replicate in a classroom. Each training scenario can be individually tailored and repeated as many times as needed, greatly improving learning outcomes.</p>
+	  </div>  
+	</div>
+
+</div>
+	
+<div class="flex-container">
+  <div class="w3-cell-row">
+	  <div class="contentBox fancy-gradient fancy-gradient--style1 w3-container w3-cell w3-cell-middle">
+		<h1 class="headingGrad">Innovative brand and product storytelling</h1>
+		<h2>Captivate your customers</h2>
+		 <p class="w3-hide-medium">We create innovative sales and marketing content to attract and captivate your customers at home, with in-store activations, on exhibition stands and on location. We help identify the platforms that provide the best opportunity and brand fit and design experiences appealing to target audiences that create measurable value.</p>
+	  </div>  
+	</div>
+  <div style="3dcontainer">
+	<canvas class="renderCanvas" id="renderCanvas2"></canvas>
+  </div>
+</div>
+	
+<div class="flex-container">
+  <div class="flipmode2" style="3dcontainer">
+  	<canvas class="renderCanvas" id="renderCanvas3"></canvas>
+  </div>
+  	  	<div class="flipmode1 w3-cell-row">
+	  <div class="contentBox fancy-gradient fancy-gradient--style1 w3-container w3-cell w3-cell-middle">
+		<h1 class="headingGrad">Experiences that inspire</h1>
+		<h2>Immerse your audience</h2>
+		  <p class="w3-hide-medium">Enhance museums and location-based experiences with virtual and augmented reality. Transport visitors to different times and places with interactive and immersive experiences. Provide additional information to an exhibit, guide visitors with navigation technology, or extend beyond your walls and allow visitors to explore, learn and enjoy from anywhere.</p>
+	  </div>  
+	</div>
+</div>
+	
+<!-- Contact -->
+<div class="w3-row w3-padding-16">
+	<div class="contactBox w3-third w3-container w3-cell w3-cell-middle">
+		<h1>Contact us</h1>
+		<h4>For all enquiries please email <strong>hello@reality-theory.com</strong> or use this form.</h4>
+		<p>When you click send, we will store and process the personal data you've entered. Please read our <a href="#">Privacy Policy</a> to understand how we handle and use your personal information.</p>
+	</div>
+  <div class="w3-twothird contactBox w3-container w3-cell w3-cell-middle">
+	  <div id="contact"> 
+	  	<h4 class="contact">Contact form</h4>
+    	<form class="w3-container" action="/action_page.php" target="_blank">
+		  <div class="w3-section">
+			<label>Name</label>
+			<input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
+		  </div>
+		  <div class="w3-section">
+			<label>Email</label>
+			<input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
+		  </div>
+		  <div class="w3-section">
+			<label>Subject</label>
+			<input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
+		  </div>
+		  <div class="w3-section">
+			<label>Message</label>
+			<input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
+		  </div>
+			<button type="submit" class="w3-button w3-block w3-black">Send</button>
+    	</form>
+  	</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-row w3-center w3-black w3-padding-16"> 
+	<a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <h4 style="color: white">Connect with us</h4>
+	  <span style="font-size: 1.5em;"> 
+		<i class="fa fa-instagram fa-xl w3-hover-opacity"></i> 
+		<i class="fa fa-twitter fa-xl w3-hover-opacity"></i> 
+		<i class="fa fa-linkedin fa-xl w3-hover-opacity"></i> 
+	  </span>
+	</div>
+	<div class="w3-row w3-padding">
+		<div class="w3-half">
+    		<p class="footerLinks"><a href="#">Terms of use</a> <a href="#">Privacy policy</a> <a href="#">Cookie policy</a></p>
+		</div>
+		<div class="w3-half">
+			<p class="copyright"><i class="fa fa-copyright"></i> 2018 - 2022 Reality Theory Ltd. All rights rerserved</p>
+		</div>
+	</div>
+</footer>
+	
+	
+		
+	
+<script>
+	// Create a working document
+	var canvas = document.createElement("canvas");
+
+	var engine = new BABYLON.Engine(canvas, true);
+
+	// Set the default canvas to use for events
+	engine.inputElement = document.getElementById("renderCanvas0");
+
+	var scene = createScene();
+
+	engine.runRenderLoop(function() {
+		if (scene.activeCamera) {
+			scene.render();
+		}		
+	});			
+</script>
+	
+<script>
+	var canvas0 = document.getElementById("renderCanvas0"); //grab the element
+	canvas0.onmousedown = function() {
+		console.log("Canvas0 was clicked");
+
+		detatchAllCams();
+
+		scene.detachControl();
+		engine.inputElement = canvas0;
+		scene.attachControl();
+		
+		//scene.activeCamera = camera; ?don't think this is required?
+		camera.attachControl(canvas0, true);
+	}
+		
+	var canvas1 = document.getElementById("renderCanvas1"); //grab the element
+	canvas1.onmousedown = function() {
+		console.log("Canvas1 was clicked");			
+
+		detatchAllCams();
+
+		scene.detachControl();
+		engine.inputElement = document.getElementById("renderCanvas1");
+		scene.attachControl();
+
+		//scene.activeCamera = camera; ?don't think this is required?
+		camera1.attachControl(document.getElementById("renderCanvas1"), true);
+	}
+	
+	var canvas2 = document.getElementById("renderCanvas2"); //grab the element
+	canvas2.onmousedown = function() {
+		console.log("Canvas2 was clicked");			
+
+		detatchAllCams();
+
+		scene.detachControl();
+		engine.inputElement = document.getElementById("renderCanvas2");
+		scene.attachControl();
+
+		//scene.activeCamera = camera; ?don't think this is required?
+		camera2.attachControl(document.getElementById("renderCanvas2"), true);
+	}
+	
+	var canvas3 = document.getElementById("renderCanvas3"); //grab the element
+	canvas3.onmousedown = function() {
+		console.log("Canvas3 was clicked");			
+
+		detatchAllCams();
+
+		scene.detachControl();
+		engine.inputElement = document.getElementById("renderCanvas3");
+		scene.attachControl();
+
+		//scene.activeCamera = camera; ?don't think this is required?
+		camera3.attachControl(document.getElementById("renderCanvas3"), true);
+	}
+</script>
+	
+<script>
+	function detatchAllCams(){
+		// detaching control of every camera in the scene.
+		scene.cameras.forEach( (camera) => {
+			console.log("Camera is " + camera);
+			camera.detachControl(scene);
+		})
+	}
+</script>
+	
+<script>
+function openRightMenu() {
+  document.getElementById("rightMenu").style.display = "block";
+}
+
+function closeRightMenu() {
+  document.getElementById("rightMenu").style.display = "none";
+}
+</script>
+	
+	
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+	
+	
+	
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+	
+
+	
+</body>
+</html>
